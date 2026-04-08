@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router";
+import {HashRouter, Route, Routes} from "react-router";
 import MainPage from "../pages/mainPage/mainPage.tsx";
 import FavoritesPage from "../pages/favoritesPage/favoritesPage.tsx";
 import './styles.css'
@@ -9,12 +9,12 @@ const App = () => {
     return (
         <div>
             <QueryClientProvider client={queryClient}>
-                <BrowserRouter>
+                <HashRouter>
                     <Routes>
                         <Route path="/" element={<MainPage/>}/>
                         <Route path="/favorites" element={<FavoritesPage/>} />
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
             </QueryClientProvider>
         </div>
     );
