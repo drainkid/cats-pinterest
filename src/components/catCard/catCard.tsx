@@ -1,10 +1,13 @@
 import styles from './catCard.module.css';
+import {FavoriteButton} from "../../features/favoriteButton/favoriteButton.tsx";
+import React from "react";
 
 type CatCardProps = {
-  url: string
+    id: string
+    url: string
 }
 
-export const CatCard = ({ url}: CatCardProps) => {
+export const CatCard = React.memo(({ id, url}: CatCardProps) => {
 
     return (
         <div className={styles.card}>
@@ -17,7 +20,8 @@ export const CatCard = ({ url}: CatCardProps) => {
                 loading="lazy"
                 decoding="async"
             />
+            <FavoriteButton catId={id} url={url} />
         </div>
     )
-}
+})
 

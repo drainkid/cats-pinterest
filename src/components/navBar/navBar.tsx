@@ -4,7 +4,6 @@ import styles from './navBar.module.css';
 export const NavBar = () => {
             return (
                 <div className={styles.navBar}>
-                    {/* Оборачиваем в контейнер, чтобы выровнять по центру/краю, если нужно */}
                     <div className={styles.container}>
                         <NavLink
                             to="/"

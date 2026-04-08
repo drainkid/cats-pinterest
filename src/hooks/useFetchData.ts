@@ -1,12 +1,19 @@
-import {useQuery} from "@tanstack/react-query";
+import {useInfiniteQuery} from "@tanstack/react-query";
 import {getCats} from "../api/api.ts";
 
+export const useFetchData = (limit: number) => {
+    return useInfiniteQuery({
+        queryKey: ['cats', 'infinite'],
 
-export const useFetchData = (limit:number, page:number) => {
+        queryFn: ({ pageParam }) => getCats(limit, pageParam),
 
-    return useQuery({
-        queryFn: () => getCats(limit, page),
-        queryKey: ['data', 'limit', 'page'],
+        initialPageParam: 1,
+
+        getNextPageParam: (lastPage, allPages) => {
+            if (lastPage && lastPage.length === limit) {
+                return allPages.length + 1
+            }
+            return undefined
+        },
     })
-
-}
+};

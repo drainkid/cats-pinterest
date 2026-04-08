@@ -1,0 +1,14 @@
+.button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    padding: 0;
+    display: flex;
+}
+
+

@@ -14,26 +14,30 @@
 }
 
 .link {
-  color: white;
+  color: #FFFFFFB2;
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.25px;
   line-height: 21px;
+  text-align: center;
   min-height: 64px;
   min-width: 120px;
-  padding: 24px 32px; /* Расстояние от текста до краев кнопки */
+  padding: 0 32px;
   display: inline-flex;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  align-items: center;
+  transition: all 0.2s ease;
+  background-color: transparent;
 }
 
 .active {
-  background-color: rgba(0, 0, 0, 0.08); /* Делает синий темнее */
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
-/* Чуть-чуть подсвечиваем при наведении мышкой */
+/* Эффект при наведении мышкой на неактивную кнопку */
 .link:hover:not(.active) {
-  background-color: hsla(0, 0%, 100%, .702);
+  color: #FFFFFF;
 }

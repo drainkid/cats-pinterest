@@ -10,7 +10,7 @@ type CatGridProps = {
 export const CardGrid = ({ children }: CatGridProps) => {
 
   return (
-    <section className={styles.grid} aria-label="Cats grid">
+    <section className={styles.grid}>
       {children}
     </section>
   )

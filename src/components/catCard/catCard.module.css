@@ -1,7 +1,8 @@
 .card {
+  position: relative;
   width: 225px;
   height: 225px;
-  overflow: hidden;
+  backface-visibility: hidden;
   transition: transform .3s ease, box-shadow .3s ease;
   &:hover {
     transform: scale(1.05);
@@ -9,9 +10,16 @@
   }
 }
 
+/* ВАЖНО: При наведении на карточку показываем кнопку (находим button внутри карточки) */
+.card:hover button {
+  opacity: 1;
+}
+
+
 .image {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+
 }
