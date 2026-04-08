@@ -1,5 +1,5 @@
 import styles from './catCard.module.css';
-import {FavoriteButton} from "../../features/favoriteButton/favoriteButton.tsx";
+import {FavoriteButton} from "../../features/favoriteButton";
 import React from "react";
 
 type CatCardProps = {
