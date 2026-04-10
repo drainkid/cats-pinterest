@@ -19,7 +19,7 @@
 - React Router
 - Tanstack Query
 
-## Запуск проекта
+## Запуск проекта локально
 
 1. Установите зависимости:
     ```bash
@@ -28,4 +28,8 @@
 2. Запустите проект:
     ```bash
     npm run dev
+    ```
+3. Создать файл `.env` в корне проекта и добавьте в него ваш API ключ от https://thecatapi.com:
+    ```
+    VITE_CAT_API_KEY=your_api_key_here
     ```
