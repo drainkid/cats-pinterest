@@ -1,8 +1,6 @@
 import axios from "axios";
 
 
-// в рамках тестового задания ключ api захардкожен.
-// для безопасности такие данные должны быть в переменных окружения (env)
 const api = axios.create({
     baseURL: "https://api.thecatapi.com/v1/images",
     headers: {
