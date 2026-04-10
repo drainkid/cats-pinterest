@@ -31,5 +31,5 @@
     ```
 3. Создать файл `.env` в корне проекта и добавьте в него ваш API ключ от https://thecatapi.com:
     ```
-    VITE_CAT_API_KEY=your_api_key_here
+    VITE_API_KEY=your_api_key_here
     ```
