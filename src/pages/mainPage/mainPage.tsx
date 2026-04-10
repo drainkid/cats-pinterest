@@ -24,7 +24,7 @@ const MainPage = () => {
         fetchNextPage
     })
 
-    const allCats = data ? data.pages.flat() : [];
+    const allCats = data ? data.pages.flat() : []
 
     return (
         <>
@@ -52,7 +52,7 @@ const MainPage = () => {
                 </Loader>
             )}
 
-            {error && <p>Error: {error.message}</p>}
+            {error && <p>Ошибка: {error.message}</p>}
 
         </>
     );

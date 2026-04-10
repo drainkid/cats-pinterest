@@ -2,11 +2,11 @@ import {NavBar} from "../../components/navBar";
 import {CardGrid} from "../../components/cardGrid";
 import {CatCard} from "../../components/catCard";
 import type {CatImage} from "../../types.ts";
+import {useFavorites} from "../../hooks/useFavorites.ts";
 
 const FavoritesPage = () => {
 
-    const storedFavorites = JSON.parse(localStorage.getItem('cats_favorites') || '[]')
-
+    const storedFavorites = useFavorites() as CatImage[]
 
     return (
         <div>

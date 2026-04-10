@@ -19,7 +19,7 @@ export const useInfiniteScroll = ({
             (entries) => {
                 // Если элемент появился на экране, есть следующая страница и мы сейчас ничего не грузим
                 if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
-                    fetchNextPage();
+                    fetchNextPage()
                 }
             },
             { threshold: 0.1 }
